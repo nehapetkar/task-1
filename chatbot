@@ -1,0 +1,23 @@
+def chatbot_response(user_input):
+    if "what is your name" in user_input.lower():
+        return "I am ChatBot, here to assist you!"
+    elif "what is your course name?" in user_input.lower():
+        return "my course name is Artificial Intelligence and Machine Learning!"
+    elif "what does it deals with?" in user_input.lower():
+        return "It deals with man made intelligence!"
+    elif "who invented aiml?" in user_input.lower():
+        return "Alan Turingn!"
+    elif "how can i contact support" in user_input.lower():
+        return "To contact support, please visit our website or call our helpline at 123-456-7890."
+    else:
+        return "I'm sorry, I don't have an answer for that."
+
+print("Chatbot: Hi there! I'm ChatBot. Feel free to ask me questions.")
+
+while True:
+    user_input = input("You: ")
+    if user_input.lower() == "exit":
+        print("Chatbot: Goodbye!")
+        break
+    response = chatbot_response(user_input)
+    print("Chatbot:", response)
